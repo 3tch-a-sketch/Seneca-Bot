@@ -21,3 +21,5 @@ pyautogui.mouseDown()
 pyautogui.mouseup()
 
 pyautogui.doubleClick()
+
+pyautogui.scroll(200)
