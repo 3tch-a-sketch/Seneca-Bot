@@ -23,3 +23,5 @@ pyautogui.mouseup()
 pyautogui.doubleClick()
 
 pyautogui.scroll(200)
+
+pyautogui.typewrite("Hello World",0.1)
