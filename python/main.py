@@ -33,6 +33,8 @@ keyboard.press_and_release("down")
 time.sleep(globaldelay)
 keyboard.press_and_release("down")
 time.sleep(globaldelay)
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
 
 keyboard.press_and_release("enter")
 if login != True:
