@@ -8,4 +8,5 @@ def click(x,y,t):
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,x,y,0,0)
 
 def move(x,y,t):
-    
+    win32api.SetCursorPos((x,y))
+    time.sleep(t)
