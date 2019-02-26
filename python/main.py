@@ -1,4 +1,4 @@
-import minilib, time, wx
+import minilib, time, wx, keyboard
 
 
 import win32api, win32con, time
@@ -30,9 +30,12 @@ def drag(x1, y1, x2, y2, t=0):
 
 
 
-
 app = wx.App(False)
 width, height = wx.GetDisplaySize()
 print(width, height)
 
-moveClick(0,1040)
+moveClick(0,1040,0.1)
+time.sleep(0.5)
+keyboard.write('Internet Explorer')
+keyboard.press('enter')
+hover
