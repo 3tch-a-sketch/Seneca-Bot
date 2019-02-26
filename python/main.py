@@ -5,8 +5,7 @@ app = wx.App(False)
 width, height = wx.GetDisplaySize()
 print(width, height)
 
-mouse.moveClick(0, 1040, 0.1)
+mouse.moveClick(0, width -10, 0.1)
 time.sleep(0.5)
 keyboard.write('Internet Explorer')
 keyboard.press('enter')
-hover
