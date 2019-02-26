@@ -1,4 +1,4 @@
-import win32api, win32con, time
+import win32api, win32con, win32gui, time
 
 def moveClick(x, y, t=0):
     win32api.SetCursorPos((x, y))
@@ -25,5 +25,22 @@ def drag(x1, y1, x2, y2, t=0):
     time.sleep(t)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x2, y2, 0, 0)
 
-def pos():
-    win32gui.GetCursorPos(point)
+def position():
+    flags, hcursor, (x,y) = win32gui.GetCursorInfo()
+    return x, y
+
+def screenSize():
+    width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
+    return width, height
+
+def positionPercent(accurate=True):
+    width, height = screenSize()
+    x, y = position()
+    relativeX = (x / width) * 100
+    relativeY = (y / height) * 100
+    relativeXrounded = int(round((x / width) * 100, 0))
+    relativeYrounded = int(round((y / height) * 100, 0))
+    if accurate:
+        return relativeX, strrelativeY
+    else:
+        return relativeXrounded, relativeYrounded
