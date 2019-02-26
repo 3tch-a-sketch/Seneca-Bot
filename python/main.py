@@ -12,9 +12,8 @@ email = "15samuletchells@catmosecollege.com"
 globaldelay = 0.2   #this should be higher on slower computers.
 
 width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
-#print(width, height)
 
-keyboard.press_and_release("left windows+r")
+keyboard.press_and_release("win")
 time.sleep(globaldelay)
 keyboard.write("chrome https://app.senecalearning.com/login")
 keyboard.press_and_release("enter")
@@ -23,9 +22,6 @@ keyboard.press("alt")
 keyboard.press("space")
 keyboard.release("alt")
 keyboard.release("space")
-time.sleep(globaldelay)
-
-keyboard.press_and_release("down")
 time.sleep(globaldelay)
 keyboard.press_and_release("down")
 time.sleep(globaldelay)
