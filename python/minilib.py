@@ -50,14 +50,11 @@ def positionPercent(x, y, accurate=True):
     else:
         return relativeXrounded, relativeYrounded
 
-def currentPositionPercent(accurate=True):
+def currentPositionPercent(accuracy=5): # accuracy is decimal places in percentage
     width, height = screenSize()
     x, y = position()
     relativeX = (x / width) * 100
     relativeY = (y / height) * 100
-    relativeXrounded = int(round((x / width) * 100, 0))
-    relativeYrounded = int(round((y / height) * 100, 0))
-    if accurate:
-        return relativeX, relativeY
-    else:
-        return relativeXrounded, relativeYrounded
+    relativeXrounded = int(round((x / width) * 100, accuracy))
+    relativeYrounded = int(round((y / height) * 100, accuracy))
+    return relativeXrounded, relativeYrounded
