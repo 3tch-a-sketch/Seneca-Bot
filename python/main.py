@@ -5,6 +5,10 @@ email = input('email:')
 password = input("password:")
 login = True
 
+# DEBUG:
+email = "15samuletchells@catmosecollege.com"
+# DEBUG:
+
 globaldelay = 0.2   #this should be higher on slower computers.
 
 width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
@@ -25,4 +29,3 @@ if login == True:
     del password
     time.sleep(globaldelay)
     keyboard.press_and_release("enter")
-else:
