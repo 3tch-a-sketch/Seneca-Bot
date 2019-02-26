@@ -1,7 +1,4 @@
-import minilib, time
-
-scrnWidth = GetSystemMetrics(0)
-scrnHeight = GetSystemMetrics(1)
-
-print(scrnWidth)
-print(scrnHeight)
+import minilib, time, wx
+ 
+app = wx.App(False)
+width, height = wx.GetDisplaySize()
