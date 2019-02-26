@@ -25,8 +25,14 @@ keyboard.release("alt")
 keyboard.release("space")
 time.sleep(globaldelay)
 
-for i in range(5):
-    keyboard.press_and_release("down")
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
 
 keyboard.press_and_release("enter")
 if login != True:
