@@ -16,9 +16,27 @@ width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
 
 keyboard.press_and_release("left windows+r")
 time.sleep(globaldelay)
-keyboard.write("chrome --kiosk https://app.senecalearning.com/login")
+keyboard.write("chrome https://app.senecalearning.com/login")
 keyboard.press_and_release("enter")
 time.sleep(globaldelay + 2)
+keyboard.press("alt")
+keyboard.press("space")
+keyboard.release("alt")
+keyboard.release("space")
+time.sleep(globaldelay)
+
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
+keyboard.press_and_release("down")
+time.sleep(globaldelay)
+
+keyboard.press_and_release("enter")
 if login != True:
     keyboard.write(email)
     del email
