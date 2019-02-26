@@ -24,3 +24,6 @@ def drag(x1, y1, x2, y2, t=0):
     win32api.SetCursorPos((x2, y2))
     time.sleep(t)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x2, y2, 0, 0)
+
+def pos():
+    win32gui.GetCursorPos(point)
