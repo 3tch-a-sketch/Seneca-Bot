@@ -33,7 +33,18 @@ def screenSize():
     width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
     return width, height
 
-def positionPercent(accurate=True):
+def positionPercent(x, y, accurate=True):
+    width, height = screenSize()
+    relativeX = (x / width) * 100
+    relativeY = (y / height) * 100
+    relativeXrounded = int(round((x / width) * 100, 0))
+    relativeYrounded = int(round((y / height) * 100, 0))
+    if accurate:
+        return relativeX, relativeY
+    else:
+        return relativeXrounded, relativeYrounded
+
+def currentPositionPercent(accurate=True):
     width, height = screenSize()
     x, y = position()
     relativeX = (x / width) * 100
