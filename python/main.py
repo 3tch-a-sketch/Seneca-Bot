@@ -3,7 +3,7 @@ import minilib as mouse
 
 email = input('email:')
 password = input("password:")
-login = True
+login = False
 
 # DEBUG:
 email = "15samuletchells@catmosecollege.com"
@@ -16,10 +16,10 @@ width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
 
 keyboard.press_and_release("left windows+r")
 time.sleep(globaldelay)
-keyboard.write("chrome -k https://app.senecalearning.com/login")
+keyboard.write("chrome --kiosk https://app.senecalearning.com/login")
 keyboard.press_and_release("enter")
 time.sleep(globaldelay + 2)
-if login == True:
+if login != True:
     keyboard.write(email)
     del email
     time.sleep(globaldelay)
@@ -29,3 +29,5 @@ if login == True:
     del password
     time.sleep(globaldelay)
     keyboard.press_and_release("enter")
+
+#mouse.hover(40,5,0.5)
