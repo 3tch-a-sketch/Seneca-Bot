@@ -30,4 +30,4 @@ if login != True:
     time.sleep(globaldelay)
     keyboard.press_and_release("enter")
 
-#mouse.hover(40,5,0.5)
+mouse.hover(mouse.xPercentToPosition(40), mouse.yPercentToPosition(5), 0.5)
