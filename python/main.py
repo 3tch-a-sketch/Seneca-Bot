@@ -6,5 +6,7 @@ print(width, height)
 
 keyboard.press_and_release("left windows+r")
 time.sleep(0.2)
-keyboard.write("iexplore https://app.senecalearning.com/login -k")
+keyboard.write("iexplore -k https://app.senecalearning.com/login")
 keyboard.press_and_release("enter")
+time.sleep(0.2)
+keyboard.press_and_release("f11")
