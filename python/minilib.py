@@ -41,6 +41,6 @@ def positionPercent(accurate=True):
     relativeXrounded = int(round((x / width) * 100, 0))
     relativeYrounded = int(round((y / height) * 100, 0))
     if accurate:
-        return relativeX, strrelativeY
+        return relativeX, relativeY
     else:
         return relativeXrounded, relativeYrounded
