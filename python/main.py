@@ -1,7 +1,6 @@
 import time, keyboard, win32api, win32con, win32gui
 import minilib as mouse
 
-
 loggedin = True
 classurl = "fe56ca00-05aa-11e8-9a61-01927559cfd5" # the url looks like this https://app.senecalearning.com/classroom/course/fe56ca00-05aa-11e8-9a61-01927559cfd5 we want this part of it
 
