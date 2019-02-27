@@ -17,7 +17,7 @@ globaldelay = 0.2   #this should be higher on slower computers.
 # non user configurable vars
 
 width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
-clip = getClipboard()
+clip = mouse.getClipboard()
 js = "..\\javascript\\answer.js"
 
 keyboard.press_and_release("win+r")
