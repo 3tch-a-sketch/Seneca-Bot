@@ -17,16 +17,15 @@ function getClass(name) {
   return(document.getElementsByClassName(name));
 }
 
-blocks = getClass("ModuleStyleWrapper__wrapper");
-currentBlock = blocks[blocks.length - 1];
-type = currentBlock.children[0].className;
-
 while(true) {
-  button = getClass("PrimaryButton medium")
+  button = getClass("PrimaryButton medium")[0]
   buttonStatus = getClass("PrimaryButton__iconTextWrapper")[0].children[0].innerHTML;
   if(buttonStatus == "Continue" || buttonStatus == "Start Learning") {
     button.click();
   } else {
+    blocks = getClass("ModuleStyleWrapper__wrapper");
+    currentBlock = blocks[blocks.length - 1];
+    type = currentBlock.children[0].className;
     if(type == "ModuleFeedbackWrapper") { // Hidden word from list
       blurredItems = currentBlock.getElementsByClassName("BlurredWord__word BlurredWord__word--blurred")
       for(var i = 0;i < blurredItems.length;i++) {
@@ -37,4 +36,5 @@ while(true) {
       }
     }
   }
+  break;
 }
