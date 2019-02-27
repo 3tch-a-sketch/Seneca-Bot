@@ -68,3 +68,5 @@ mouse.setClipBoard(js)
 time.sleep(globaldelay)
 
 keyboard.press_and_release("ctrl+v")
+time.sleep(globaldelay)
+keyboard.press_and_release("enter")
