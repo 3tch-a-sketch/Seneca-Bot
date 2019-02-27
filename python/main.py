@@ -45,4 +45,11 @@ x = mouse.xPercentToPosition(0.05)
 y = mouse.yPercentToPosition(0.74)
 print(str(x)+" "+str(y))
 
-mouse.hover(y, x, 0.5)
+mouse.moveClick(y, x, 0.5)
+
+time.sleep(globaldelay)
+
+x = mouse.xPercentToPosition(0.60)
+y = mouse.yPercentToPosition(0.93)
+print(str(x)+" "+str(y))
+mouse.moveClick(y, x, 0.5)
