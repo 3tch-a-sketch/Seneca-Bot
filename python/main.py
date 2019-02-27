@@ -25,7 +25,7 @@ else:
     keyboard.write("https://app.senecalearning.com/classroom/course/"+classurl)
 
 keyboard.press_and_release("enter")
-time.sleep(globaldelay + 2)
+time.sleep(globaldelay + 5)
 keyboard.press_and_release("f11")
 
 keyboard.press_and_release("enter")
