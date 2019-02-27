@@ -14,7 +14,11 @@ email = "15samuletchells@catmosecollege.com"
 
 globaldelay = 0.2   #this should be higher on slower computers.
 
+# non user configurable vars
+
 width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
+clip = getClipboard()
+js = "..\\javascript\\answer.js"
 
 keyboard.press_and_release("win+r")
 time.sleep(globaldelay)
@@ -54,3 +58,5 @@ y = mouse.yPercentToPosition(0.98)
 print(str(x)+" "+str(y))
 
 mouse.moveClick(y, x, 0.5)
+
+mouse.setClipBoard(js)
