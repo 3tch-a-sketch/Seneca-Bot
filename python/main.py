@@ -17,8 +17,12 @@ globaldelay = 0.2   #this should be higher on slower computers.
 # non user configurable vars
 
 width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
-clip = mouse.getClipboard()
-js = "..\\javascript\\answer.js"
+jsPath = "..\\javascript\\answer.js"
+js = ""
+with open(jsPath, "r") as f:
+    js = f.read()
+
+print("JS: "+js)
 
 keyboard.press_and_release("win+r")
 time.sleep(globaldelay)
@@ -57,6 +61,7 @@ x = mouse.xPercentToPosition(0.63)
 y = mouse.yPercentToPosition(0.98)
 print(str(x)+" "+str(y))
 
+time.sleep(globaldelay+2)
 mouse.moveClick(y, x, 0.5)
 
 mouse.setClipBoard(js)
