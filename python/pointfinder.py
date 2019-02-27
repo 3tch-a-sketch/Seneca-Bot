@@ -1,4 +1,4 @@
 import minilib as mouse
 
 while True:
-    print(mouse.currentPositionPercent())
+    print(mouse.currentPositionPercent(2))

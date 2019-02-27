@@ -40,4 +40,4 @@ if loggedin == False:
     time.sleep(globaldelay)
     keyboard.press_and_release("enter")
 
-mouse.hover(mouse.xPercentToPosition(40), mouse.yPercentToPosition(5), 0.5)
+mouse.hover(mouse.xPercentToPosition(78), mouse.yPercentToPosition(5), 0.5)
