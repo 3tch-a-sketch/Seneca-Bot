@@ -1,5 +1,17 @@
 import win32api, win32con, win32gui, time, win32clipboard
 
+def setClipBoard(text):
+    win32clipboard.OpenClipboard()
+    win32clipboard.EmptyClipboard()
+    win32clipboard.SetClipboardText(text)
+    win32clipboard.CloseClipboard()
+
+def getClipboard():
+    win32clipboard.OpenClipboard()
+    data = win32clipboard.GetClipboardData()
+    win32clipboard.CloseClipboard()
+    return data
+
 def moveClick(x, y, t=0):
     win32api.SetCursorPos((x, y))
     time.sleep(t)
