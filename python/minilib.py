@@ -1,4 +1,4 @@
-import win32api, win32con, win32gui, time
+import win32api, win32con, win32gui, time, win32clipboard
 
 def moveClick(x, y, t=0):
     win32api.SetCursorPos((x, y))

@@ -3,8 +3,9 @@ import minilib as mouse
 
 
 loggedin = True
+classurl = "fe56ca00-05aa-11e8-9a61-01927559cfd5" # the url looks like this https://app.senecalearning.com/classroom/course/fe56ca00-05aa-11e8-9a61-01927559cfd5 we want this part of it
 
-if loggedin =! True:
+if loggedin != True:
     email = input('email:')
     password = input("password:")
 
@@ -18,7 +19,12 @@ width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
 
 keyboard.press_and_release("win+r")
 time.sleep(globaldelay)
-keyboard.write("chrome https://app.senecalearning.com/login")
+
+if loggedin != True:
+    keyboard.write("chrome https://app.senecalearning.com/login")
+else:
+    keyboard.write("https://app.senecalearning.com/classroom/course/"+classurl)
+
 keyboard.press_and_release("enter")
 time.sleep(globaldelay + 2)
 keyboard.press_and_release("f11")
