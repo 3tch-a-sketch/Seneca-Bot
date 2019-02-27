@@ -48,22 +48,3 @@ print(str(x)+" "+str(y))
 mouse.moveClick(y, x, 0.5)
 
 time.sleep(globaldelay)
-
-x2 = mouse.xPercentToPosition(0.95)
-y2 = mouse.yPercentToPosition(0.60)
-print(str(x)+" "+str(y))
-mouse.moveClick(y2, x2, 0.5)
-
-time.sleep(globaldelay)
-
-x2 = mouse.xPercentToPosition(0.95)
-y2 = mouse.yPercentToPosition(0.60)
-print(str(x)+" "+str(y))
-mouse.moveClick(y2, x2, 0.5)
-
-time.sleep(globaldelay)
-
-x2 = mouse.xPercentToPosition(0.95)
-y2 = mouse.yPercentToPosition(0.60)
-print(str(x)+" "+str(y))
-mouse.moveClick(y2, x2, 0.5)
