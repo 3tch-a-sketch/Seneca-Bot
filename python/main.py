@@ -49,8 +49,8 @@ mouse.moveClick(y, x, 0.5)
 
 time.sleep(globaldelay)
 keyboard.press_and_release("f12")
-x = mouse.xPercentToPosition(0.00)
-y = mouse.yPercentToPosition(1.4)
+x = mouse.xPercentToPosition(0.63)
+y = mouse.yPercentToPosition(0.98)
 print(str(x)+" "+str(y))
 
 mouse.moveClick(y, x, 0.5)
