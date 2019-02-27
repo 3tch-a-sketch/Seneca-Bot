@@ -13,7 +13,7 @@ globaldelay = 0.2   #this should be higher on slower computers.
 
 width, height = win32api.GetSystemMetrics(0), win32api.GetSystemMetrics(1)
 
-keyboard.press_and_release("win")
+keyboard.press_and_release("win+r")
 time.sleep(globaldelay)
 keyboard.write("chrome https://app.senecalearning.com/login")
 keyboard.press_and_release("enter")

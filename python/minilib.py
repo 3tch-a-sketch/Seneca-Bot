@@ -8,6 +8,7 @@ def moveClick(x, y, t=0):
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
 
 def hover(x, y, t=0):
+    x, y = int(x), int(y)
     win32api.SetCursorPos((x, y))
     time.sleep(t)
 
@@ -34,10 +35,10 @@ def screenSize():
     return width, height
 
 def xPercentToPosition(percent):
-    return round(screenSize[0]/percent, 0)
+    return round(screenSize()[0]/percent, 0)
 
 def yPercentToPosition(percent):
-    return round(screenSize[0]/percent, 0)
+    return round(screenSize()[0]/percent, 0)
 
 def positionPercent(x, y, accurate=True):
     width, height = screenSize()
