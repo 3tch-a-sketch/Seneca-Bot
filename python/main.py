@@ -1,9 +1,12 @@
 import time, keyboard, win32api, win32con, win32gui
 import minilib as mouse
 
-email = input('email:')
-password = input("password:")
-login = False
+
+loggedin = True
+
+if loggedin =! True:
+    email = input('email:')
+    password = input("password:")
 
 # DEBUG:
 email = "15samuletchells@catmosecollege.com"
@@ -21,7 +24,7 @@ time.sleep(globaldelay + 2)
 keyboard.press_and_release("f11")
 
 keyboard.press_and_release("enter")
-if login != True:
+if loggedin == False:
     keyboard.write(email)
     del email
     time.sleep(globaldelay)
