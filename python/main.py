@@ -60,3 +60,6 @@ print(str(x)+" "+str(y))
 mouse.moveClick(y, x, 0.5)
 
 mouse.setClipBoard(js)
+time.sleep(globaldelay)
+
+keyboard.press_and_release("ctrl+v")
