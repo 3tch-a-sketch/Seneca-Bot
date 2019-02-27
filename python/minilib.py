@@ -13,6 +13,7 @@ def getClipboard():
     return data
 
 def moveClick(x, y, t=0):
+    x, y = int(x), int(y)
     win32api.SetCursorPos((x, y))
     time.sleep(t)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
@@ -25,6 +26,7 @@ def hover(x, y, t=0):
     time.sleep(t)
 
 def click(x, y, t=0):
+    x, y = int(x), int(y)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
     time.sleep(t)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
