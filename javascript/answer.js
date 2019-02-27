@@ -3,7 +3,7 @@ function get(id) {
 }
 
 function pause(milliseconds) {
-  setTimeout(pause, milliseconds);
+  setTimeout(function(){;},milliseconds);
 }
 
 function myFunction() {
@@ -23,8 +23,10 @@ type = currentBlock.children[0].className;
 
 if(type == "ModuleFeedbackWrapper") { // Hidden word from list
   blurredItems = currentBlock.getElementsByClassName("BlurredWord__word BlurredWord__word--blurred")
-  for(i = 0;i < blurredItems.length;i++)
+  for(var i = 0;i < blurredItems.length;i++) {
     blurredItem = blurredItems[i].children[0].innerHTML;
+    console.log(blurredItem);
     currentBlock.getElementsByClassName("List__WordInput__input")[0].value = blurredItem+'\n';
     pause(1000);
+  }
 }

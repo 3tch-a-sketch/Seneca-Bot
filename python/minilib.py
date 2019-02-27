@@ -64,7 +64,7 @@ def positionPercent(x, y, accuracy=5):
 
 def currentPositionPercent(accuracy=5): # accuracy is decimal places in percentage
     width, height = screenSize()
-    y, x = position()
+    x, y = position()
     relativeX = (x / width) * 100
     relativeY = (y / height) * 100
     relativeXrounded = int(round((x / width) * 100, accuracy))
