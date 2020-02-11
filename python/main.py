@@ -9,7 +9,7 @@ if loggedin != True:
     password = input("password:")
 
 # DEBUG:
-email = "15samuletchells@catmosecollege.com"
+email = "REDACTED"
 # DEBUG:
 
 globaldelay = 0.2   #this should be higher on slower computers.
