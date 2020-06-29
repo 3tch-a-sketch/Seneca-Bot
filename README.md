@@ -1,4 +1,4 @@
-S�e�n�e�c�a�-�B�o�t
+Seneca-Bot
 
 This bot is currently indev and doesn't work well enought to actually use. I also think that Seneca have updated some of their site and broken the js that finds answers.  
 
