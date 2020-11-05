@@ -18,15 +18,16 @@ function getClass(name) {
 }
 
 while(true) {
-  button = getClass("PrimaryButton medium")[0]
-  buttonStatus = getClass("PrimaryButton__iconTextWrapper")[0].children[0].innerHTML;
-  if(buttonStatus == "Continue" || buttonStatus == "Start Learning") {
+  button = getClass("PrimaryButtonTypes_medium__3jJgQ")[0]
+  buttonStatus = getClass("Button_iconTextWrapper__2AVyk")[1].children[0].innerHTML;
+  //console.log(buttonStatus);
+	if(buttonStatus == "Continue" || buttonStatus == "Start learning") {
     button.click();
   } else {
-    blocks = getClass("ModuleStyleWrapper__wrapper");
+    blocks = getClass("SessionItemEntranceTransitionWrapper");
     currentBlock = blocks[blocks.length - 1];
     type = currentBlock.children[0].className;
-    if(type == "ModuleFeedbackWrapper") { // Hidden word from list
+    if(type == "withModuleStyle_wrapper__5MQZf") { // Hidden word from list
       blurredItems = currentBlock.getElementsByClassName("BlurredWord__word BlurredWord__word--blurred")
       for(var i = 0;i < blurredItems.length;i++) {
         blurredItem = blurredItems[i].children[0].innerHTML;
